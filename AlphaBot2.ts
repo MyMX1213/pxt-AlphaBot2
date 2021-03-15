@@ -279,14 +279,17 @@ namespace AlphaBot2 {
                 }
                 pins.digitalWritePin(DigitalPin.P13, 1);
                 pins.digitalWritePin(DigitalPin.P13, 0);
-		basic.pause(2);
+		
+            }
+            for (j = 0; j < 6; j++) {
+                pins.digitalWritePin(DigitalPin.P13, 1);
+                pins.digitalWritePin(DigitalPin.P13, 0);
 		
             }
 	    basic.pause(2);
 	    setPwm(0, 0, 4095);
         }
         //pins.digitalWritePin(DigitalPin.P16, 1);
-	basic.pause(2);
         for (i = 0; i < 5; i++) {
             sensor_values[i] = values[i + 1];
         }
