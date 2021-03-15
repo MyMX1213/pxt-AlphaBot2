@@ -260,9 +260,10 @@ namespace AlphaBot2 {
         let values = [0, 0, 0, 0, 0, 0];
         let sensor_values = [0, 0, 0, 0, 0];
         //pins.digitalWritePin(DigitalPin.P16, 0);
-
+	 setPwm(0, 0, 0);
+	 basic.pause(2);
         for (i = 0; i < 6; i++) {
-	    setPwm(0, 0, 0);
+
             for (j = 0; j < 10; j++) {
                 //0 to 4 clock transfer channel address
                 if (j < 4) {
@@ -286,9 +287,8 @@ namespace AlphaBot2 {
                 pins.digitalWritePin(DigitalPin.P13, 0);
 		
             }
-	    basic.pause(2);
-	    setPwm(0, 0, 4095);
         }
+	setPwm(0, 0, 4095);
         //pins.digitalWritePin(DigitalPin.P16, 1);
         for (i = 0; i < 5; i++) {
             sensor_values[i] = values[i + 1];
